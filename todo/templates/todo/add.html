@@ -1,0 +1,14 @@
+{% extends 'todo/layout.html' %}
+
+{% block body %}
+
+    <h1>Agregar tarea</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button>Add</button>
+    </form>
+    <br>
+    <a href="{% url 'home'%}">regresar</a>
+{% endblock %}
